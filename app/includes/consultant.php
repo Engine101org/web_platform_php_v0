@@ -6,7 +6,6 @@
  * Time: 07:53
  */
 
-class consultant
+class Consultant
 {
-
 }

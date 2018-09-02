@@ -32,7 +32,7 @@ $sql2 = "CREATE TABLE IF NOT EXISTS users ("
 . "profile_pic_url varchar(100),"
 . "password varchar(1000),"
 . "status varchar(50),"
-. "role varchar(50),"
+. "role varchar(50) DEFAULT 'consultant',"
 . "confirmation_code varchar(1000),"
 . "fb_id varchar(150),"
 . "PRIMARY KEY (id));";

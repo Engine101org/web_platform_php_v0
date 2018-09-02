@@ -1,5 +1,5 @@
 <?php
-include "../includes/pages/header_.php";
+include "./header_.php";
 ?>
 <body>
 
@@ -144,7 +144,7 @@ include "../includes/pages/header_.php";
     </div>
 </div>
 <?php
-include "../includes/pages/footer_.php";
+include "./footer_.php";
 ?>
 </body>
 </html>
