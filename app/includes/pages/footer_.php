@@ -5,9 +5,25 @@
         src="http://flatable.phoenixcoded.net/bower_components/tether/dist/js/tether.min.js"></script>
 <script type="text/javascript"
         src="http://flatable.phoenixcoded.net/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
 <script type="text/javascript"
         src="http://flatable.phoenixcoded.net/bower_components/jquery-slimscroll/jquery.slimscroll.js"></script>
+<script src="http://flatable.phoenixcoded.net/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="http://flatable.phoenixcoded.net/bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<!--Tables-->
+<script src="http://flatable.phoenixcoded.net/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="http://flatable.phoenixcoded.net/bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script src="<?= WEBSITE_URL ?>assets/pages/data-table/js/jszip.min.js"></script>
+<script src="<?= WEBSITE_URL ?>assets/pages/data-table/js/pdfmake.min.js"></script>
+<script src="<?= WEBSITE_URL ?>assets/pages/data-table/js/vfs_fonts.js"></script>
+<script src="http://flatable.phoenixcoded.net/bower_components/datatables.net-buttons/js/buttons.print.min.js"></script>
+<script src="http://flatable.phoenixcoded.net/bower_components/datatables.net-buttons/js/buttons.html5.min.js"></script>
+<script src="http://flatable.phoenixcoded.net/bower_components/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="http://flatable.phoenixcoded.net/bower_components/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="http://flatable.phoenixcoded.net/bower_components/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+<script src="<?= WEBSITE_URL ?>assets/pages/data-table/js/data-table-custom.js"></script>
+
+<script type="text/javascript" src="http://flatable.phoenixcoded.net/bower_components/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
+<script type="text/javascript" src="<?= WEBSITE_URL ?>assets/pages/rating/rating.js"></script>
 
 <script type="text/javascript" src="http://flatable.phoenixcoded.net/bower_components/modernizr/modernizr.js"></script>
 <script type="text/javascript"

@@ -71,37 +71,71 @@ include "../includes/pages/header_.php";
                     <div class="pcoded-inner-navbar main-menu"><br>
                         <ul class="pcoded-item pcoded-left-item">
                             <li class=" ">
-                                <a href="form-picker.html" data-i18n="nav.form-pickers.main">
+                                <a href="#" data-i18n="nav.form-pickers.main">
                                     <span class="pcoded-micon"><i class="ti-pencil-alt"></i></span>
                                     <span class="pcoded-mtext">Dashboard</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
+                            <li class="pcoded-hasmenu">
+                                <a href="javascript:void(0)" data-i18n="nav.form-components.main">
+                                    <span class="pcoded-micon"><i class="ti-layers"></i></span>
+                                    <span class="pcoded-mtext">Consultants</span>
+                                    <span class="pcoded-mcaret"></span>
+                                </a>
+                                <ul class="pcoded-submenu">
+                                    <li class=" ">
+                                        <a href="#"
+                                           data-i18n="nav.form-components.form-components">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">All</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                    <li class=" ">
+                                        <a href="#"
+                                           data-i18n="nav.form-components.form-components">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Computer Science</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                    <li class=" ">
+                                        <a href="#"
+                                           data-i18n="nav.form-components.form-elements-add-on">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Mathematics</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                    <li class=" ">
+                                        <a href="#"
+                                           data-i18n="nav.form-components.form-elements-add-on">
+                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
+                                            <span class="pcoded-mtext">Humans Science</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
                             <li class=" ">
-                                <a href="form-picker.html" data-i18n="nav.form-pickers.main">
+                                <a href="#" data-i18n="nav.form-pickers.main">
                                     <span class="pcoded-micon"><i class="ti-pencil-alt"></i></span>
-                                    <span class="pcoded-mtext">Dashboard</span>
+                                    <span class="pcoded-mtext">Subjects</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
                             <li class=" ">
-                                <a href="form-picker.html" data-i18n="nav.form-pickers.main">
+                                <a href="#" data-i18n="nav.form-pickers.main">
                                     <span class="pcoded-micon"><i class="ti-pencil-alt"></i></span>
-                                    <span class="pcoded-mtext">Dashboard</span>
+                                    <span class="pcoded-mtext">Timeslots</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
                             <li class=" ">
-                                <a href="form-picker.html" data-i18n="nav.form-pickers.main">
+                                <a href="f#" data-i18n="nav.form-pickers.main">
                                     <span class="pcoded-micon"><i class="ti-pencil-alt"></i></span>
-                                    <span class="pcoded-mtext">Dashboard</span>
-                                    <span class="pcoded-mcaret"></span>
-                                </a>
-                            </li>
-                            <li class=" ">
-                                <a href="form-picker.html" data-i18n="nav.form-pickers.main">
-                                    <span class="pcoded-micon"><i class="ti-pencil-alt"></i></span>
-                                    <span class="pcoded-mtext">Dashboard</span>
+                                    <span class="pcoded-mtext">Guides</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
@@ -136,6 +170,17 @@ include "../includes/pages/header_.php";
                 <div class="pcoded-content">
                     <div class="pcoded-inner-content">
                         <div class="main-body">
+                            <div class="page-wrapper">
+                                <?php
+                                if (isset($_GET['consultants'])) {
+                                    include "consultants.php";
+                                } elseif (isset($_GET['requests'])) {
+                                    include "requests.php";
+                                } else {
+                                    include "home.php";
+                                }
+                                ?>
+                            </div>
                         </div>
                     </div>
                 </div>

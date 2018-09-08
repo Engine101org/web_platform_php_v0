@@ -34,12 +34,16 @@
 
     <link rel="stylesheet" type="text/css" href="<?= WEBSITE_URL ?>assets/pages/menu-search/css/component.css">
 
-<!--    <link rel="stylesheet" type="text/css" href="--><?//= WEBSITE_URL ?><!--assets/pages/dashboard/horizontal-timeline/css/style.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="--><?//= WEBSITE_URL ?><!--assets/pages/dashboard/horizontal-timeline/css/style.css">-->
     <link rel="stylesheet" type="text/css" href="<?= WEBSITE_URL ?>assets/pages/j-pro/css/demo.css">
     <link rel="stylesheet" type="text/css" href="<?= WEBSITE_URL ?>assets/pages/j-pro/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?= WEBSITE_URL ?>assets/pages/j-pro/css/j-pro-modern.css">
     <link rel="stylesheet" type="text/css" href="<?= WEBSITE_URL ?>assets/pages/flag-icon/flag-icon.min.css">
 
+    <!--  Tables styles  -->
+    <link rel="stylesheet" type="text/css" href="http://flatable.phoenixcoded.net/bower_components/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="<?= WEBSITE_URL ?>assets/pages/data-table/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="http://flatable.phoenixcoded.net/bower_components/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css" href="<?= WEBSITE_URL ?>assets/css/style.css">
 
     <link rel="stylesheet" type="text/css" href="<?= WEBSITE_URL ?>assets/css/color/color-1.css" id="color"/>

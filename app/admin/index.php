@@ -71,35 +71,35 @@
                     <div class="pcoded-inner-navbar main-menu"><br>
                         <ul class="pcoded-item pcoded-left-item">
                             <li class=" ">
-                                <a href="form-picker.html" data-i18n="nav.form-pickers.main">
+                                <a href="?" data-i18n="nav.form-pickers.main">
                                     <span class="pcoded-micon"><i class="ti-pencil-alt"></i></span>
                                     <span class="pcoded-mtext">Dashboard</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
                             <li class=" ">
-                                <a href="form-picker.html" data-i18n="nav.form-pickers.main">
+                                <a href="?" data-i18n="nav.form-pickers.main">
                                     <span class="pcoded-micon"><i class="ti-pencil-alt"></i></span>
                                     <span class="pcoded-mtext">Dashboard</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
                             <li class=" ">
-                                <a href="form-picker.html" data-i18n="nav.form-pickers.main">
+                                <a href="?" data-i18n="nav.form-pickers.main">
                                     <span class="pcoded-micon"><i class="ti-pencil-alt"></i></span>
                                     <span class="pcoded-mtext">Dashboard</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
                             <li class=" ">
-                                <a href="form-picker.html" data-i18n="nav.form-pickers.main">
+                                <a href="?" data-i18n="nav.form-pickers.main">
                                     <span class="pcoded-micon"><i class="ti-pencil-alt"></i></span>
                                     <span class="pcoded-mtext">Dashboard</span>
                                     <span class="pcoded-mcaret"></span>
                                 </a>
                             </li>
                             <li class=" ">
-                                <a href="form-picker.html" data-i18n="nav.form-pickers.main">
+                                <a href="?" data-i18n="nav.form-pickers.main">
                                     <span class="pcoded-micon"><i class="ti-pencil-alt"></i></span>
                                     <span class="pcoded-mtext">Dashboard</span>
                                     <span class="pcoded-mcaret"></span>
@@ -113,7 +113,7 @@
                                 </a>
                                 <ul class="pcoded-submenu">
                                     <li class=" ">
-                                        <a href="form-elements-component.html"
+                                        <a href="?"
                                            data-i18n="nav.form-components.form-components">
                                             <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                                             <span class="pcoded-mtext">View users</span>
@@ -121,7 +121,7 @@
                                         </a>
                                     </li>
                                     <li class=" ">
-                                        <a href="index.php?adduser=true"
+                                        <a href="?adduser=true"
                                            data-i18n="nav.form-components.form-elements-add-on">
                                             <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                                             <span class="pcoded-mtext">Add user</span>
