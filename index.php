@@ -1,6 +1,6 @@
 <?php
 
-require ("vendor/autoload.php");
+require "vendor/autoload.php";
 require_once "config.php";
 
 $redirectURL = "fb-callback.php";
@@ -10,51 +10,63 @@ $loginURL = $helper->getLoginUrl($redirectURL, $permissions);
 // check Register request
 /*
 if (!empty($_POST['btnFbSignUp'])) {
-    session_start();
-    if(isset($_GET['state'])) {
-        $_SESSION['FBRLH_state'] = $_GET['state'];
-    }
-    //Step 1: Enter Credentials
-    $fb = new \Facebook\Facebook([
-        'app_id' => '1881471198759145',
-        'app_secret' => 'b99f9d165e0899d99c4428ea1c3d3f60',
-        'default_graph_version' => 'v2.10',
-        //'default_access_token' => '{access-token}', // optional
-    ]);
-    //Step 2 Create the url
-    if(empty($access_token)) {
-        echo "<a href='{$fb->getRedirectLoginHelper()->getLoginUrl("http://localhost/login/facebook_login.php")}'>Login with Facebook </a>";
-    }
-    //Step 3 : Get Access Token
-    $access_token = $fb->getRedirectLoginHelper()->getAccessToken();
-    //Step 4: Get the graph user
-    if(isset($access_token)) {
-        try {
-            $response = $fb->get('/me',$access_token);
-            $fb_user = $response->getGraphUser();
-            echo  $fb_user->getName();
-            //  var_dump($fb_user);
-        } catch (\Facebook\Exceptions\FacebookResponseException $e) {
-            echo  'Graph returned an error: ' . $e->getMessage();
-        } catch (\Facebook\Exceptions\FacebookSDKException $e) {
-            // When validation fails or other local issues
-            echo 'Facebook SDK returned an error: ' . $e->getMessage();
-        }
-    }
+session_start();
+if(isset($_GET['state'])) {
+$_SESSION['FBRLH_state'] = $_GET['state'];
 }
-*/
+//Step 1: Enter Credentials
+$fb = new \Facebook\Facebook([
+'app_id' => '1881471198759145',
+'app_secret' => 'b99f9d165e0899d99c4428ea1c3d3f60',
+'default_graph_version' => 'v2.10',
+//'default_access_token' => '{access-token}', // optional
+]);
+//Step 2 Create the url
+if(empty($access_token)) {
+echo "<a href='{$fb->getRedirectLoginHelper()->getLoginUrl("http://localhost/login/facebook_login.php")}'>Login with Facebook </a>";
+}
+//Step 3 : Get Access Token
+$access_token = $fb->getRedirectLoginHelper()->getAccessToken();
+//Step 4: Get the graph user
+if(isset($access_token)) {
+try {
+$response = $fb->get('/me',$access_token);
+$fb_user = $response->getGraphUser();
+echo  $fb_user->getName();
+//  var_dump($fb_user);
+} catch (\Facebook\Exceptions\FacebookResponseException $e) {
+echo  'Graph returned an error: ' . $e->getMessage();
+} catch (\Facebook\Exceptions\FacebookSDKException $e) {
+// When validation fails or other local issues
+echo 'Facebook SDK returned an error: ' . $e->getMessage();
+}
+}
+}
+ */
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125917106-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'UA-125917106-1');
+        </script>
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="icon" href="img/fav-icon.png" type="image/x-icon" />
+        <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Engine101</title>
+        <title>Engine101 - Home</title>
 
         <!-- Icon css link -->
         <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -93,21 +105,11 @@ if (!empty($_POST['btnFbSignUp'])) {
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav">
-                        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link blue" href="about-us.html">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                        <li class="nav-item dropdown submenu">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Blog
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                                <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
-                                <li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link blue" href="about/">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery/">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog/">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact/">contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -150,9 +152,9 @@ if (!empty($_POST['btnFbSignUp'])) {
                                 data-type="text"
                                 data-responsive_offset="on"
                                 data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]">
-                                <a class="more_btn" href="#signin">Sign In</a>
+                                <a class="more_btn" href="coming/">Sign In</a>
                             </div>
-                            
+
                         </div>
                     </li>
 
@@ -190,11 +192,11 @@ if (!empty($_POST['btnFbSignUp'])) {
                                 data-type="text"
                                 data-responsive_offset="on"
                                 data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]">
-                                <a class="more_btn" href="#">Sign Up</a>
+                                <a class="more_btn" href="coming/">Sign Up</a>
                             </div>
                         </div>
                     </li>
-                    
+
                     <li data-index="rs-1589" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0"  data-saveperformance="off"  data-title="Creative" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                     <!-- LAYERS -->
                         <!-- LAYERS -->
@@ -229,9 +231,9 @@ if (!empty($_POST['btnFbSignUp'])) {
                                 data-type="text"
                                 data-responsive_offset="on"
                                 data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]">
-                                <a class="more_btn" href="#">Learn More</a>
+                                <a class="more_btn" href="about/">Learn More</a>
                             </div>
-                            
+
                         </div>
                     </li>
                 </ul>
@@ -244,8 +246,8 @@ if (!empty($_POST['btnFbSignUp'])) {
             <div class="container">
                 <div class="c_title">
                     <img src="img/icon/title-icon.png" alt="">
-                    <h6>Discover the features</h6>
-                    <h2>We are young but bold</h2>
+                    <h6>Engine101</h6>
+                    <h2>A S.T.E.M. after school program, to get kids in the developing world excited and engaging with Stem early.</h2>
                 </div>
                 <div class="row feature_inner">
                     <div class="col-lg-4 col-sm-6">
@@ -253,8 +255,12 @@ if (!empty($_POST['btnFbSignUp'])) {
                             <div class="f_icon">
                                 <img src="img/icon/f-icon-1.png" alt="">
                             </div>
-                            <h4>Brand Identity</h4>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
+                            <h4>The Big Idea</h4>
+                            <p>
+                                90% of parents want their children to learn computer science but only 40% of schools globally teach computer programming (This figure plummets when considering the African continent) </br>
+                                We want to introduce young school going Zimbabweans and Sub-Saharan Africans to skills required to enter some of the most on demanding STEM professions right now.
+                                Encourage young girls to start thinking of a Stem careers at an early age and help reduce the gender gap in STEM careers in Africa. </br>
+                            </p>
                             <a class="more_btn" href="#">Read More</a>
                         </div>
                     </div>
@@ -263,8 +269,17 @@ if (!empty($_POST['btnFbSignUp'])) {
                             <div class="f_icon">
                                 <img src="img/icon/f-icon-2.png" alt="">
                             </div>
-                            <h4>Online Marketing</h4>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
+                            <h4>How We Get This Done</h4>
+                            <p>
+                                Engine 101 is an afterschool program designed for students ages 10 - 18. </br>
+                                It seeks to introduce young school going Zimbabweans to skills required to enter some of the most on demand STEM professions right now. </br>
+                                The skills training will encompass a broad range of focus areas including </br>
+                                - Programming </br>
+                                - Game Design </br>
+                                - Introduction to Electronics and Robotics </br>
+                                - Mentoring </br>
+                                ***At NO COST to students &amp; their parents!</br>
+                            </p>
                             <a class="more_btn" href="#">Read More</a>
                         </div>
                     </div>
@@ -273,8 +288,22 @@ if (!empty($_POST['btnFbSignUp'])) {
                             <div class="f_icon">
                                 <img src="img/icon/f-icon-3.png" alt="">
                             </div>
-                            <h4>Social Media</h4>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
+                            <h4>What We Are Working On</h4>
+                            <p> 
+                                We want to introduce the kids to: </br> 
+                            </p>
+                                <div style="text-align:center">
+                                    <p>
+                                        Scratch</br>
+                                        Raspberry PI </br>
+                                        Arduino </br>
+                                        Robotics (Lego Mindstorms &amp; Sphero) </br>
+                                        Web Development </br>
+                                    </p>
+                                </div>
+                            <p>   
+                                And plan to expand the list of activities as time goes on.
+                            </p>
                             <a class="more_btn" href="#">Read More</a>
                         </div>
                     </div>
@@ -288,17 +317,22 @@ if (!empty($_POST['btnFbSignUp'])) {
             <div class="left_3d">
                 <div class="shap_slider_inner owl-carousel">
                     <div class="item">
-                        <h4>“They are the best”</h4>
-                        <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus.</p>
-                        <div class="media">
-                            <img src="img/team/people/people-5.jpg" alt="">
-                            <div class="media-body">
-                                <h5>Chriss Turner</h5>
-                                <h6>CEO Enterprise</h6>
+                        <!--
+
+                            <h4>“They are the best”</h4>
+                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus.</p>
+                            <div class="media">
+                                    <img src="img/team/people/people-5.jpg" alt="">
+                                    <div class="media-body">
+                                        <h5>Chriss Turner</h5>
+                                        <h6>CEO Enterprise</h6>
+                                    </div>
                             </div>
-                        </div>
+
+                        -->
                     </div>
                     <div class="item">
+                        <!--
                         <h4>“They are the best”</h4>
                         <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus.</p>
                         <div class="media">
@@ -308,8 +342,10 @@ if (!empty($_POST['btnFbSignUp'])) {
                                 <h6>CEO Enterprise</h6>
                             </div>
                         </div>
+                        -->
                     </div>
                     <div class="item">
+                        <!--
                         <h4>“They are the best”</h4>
                         <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus.</p>
                         <div class="media">
@@ -319,6 +355,7 @@ if (!empty($_POST['btnFbSignUp'])) {
                                 <h6>CEO Enterprise</h6>
                             </div>
                         </div>
+                        -->
                     </div>
                 </div>
             </div>
@@ -327,10 +364,15 @@ if (!empty($_POST['btnFbSignUp'])) {
                     <div class="text_3d">
                         <div class="l_title">
                             <img src="img/icon/title-icon.png" alt="">
-                            <h6>Discover the features</h6>
-                            <h2>We don’t hide, we stand tall in front of chalenge</h2>
+                            <h2>
+                                We believe that
+                            </h2>
                         </div>
-                        <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra a eget nisi. Aenean pellentesque elit vitae eros dignissim ultrices. </p>
+                        <p>
+                            Talent is distributed equally across the gender, geographical and racial lines. </br>
+                            Sustainability and longevity is key, if its worth doing then do it well and for as long as you can. </br>
+                            Learning and teaching is fun and we wouldn't have it any other way!</br>
+                        </p>
                     </div>
                     <div class="shap_mobile">
                         <img src="img/iphone4.png" alt="">
@@ -348,16 +390,11 @@ if (!empty($_POST['btnFbSignUp'])) {
                         <div class="team_people_text">
                             <div class="l_title">
                                 <img src="img/icon/title-icon.png" alt="">
-                                <h6>Discover the features</h6>
-                                <h2>We build a strong team of great people</h2>
+                                <h2>Are you a developer? Volunteer some of your time to help teach kids how to code.</h2>
                             </div>
-                            <p>Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra.</p>
+                            <p>Sign up to help a school close to you</p>
                             <ul>
-                                <li><a href="#">Nunc nec maximus dui, </a></li>
-                                <li><a href="#">Aenean pellentesque elit vitae</a></li>
-                                <li><a href="#">Aenean pellentesque elit vitae</a></li>
-                                <li><a href="#">Ex mauris, ornare eget pretium </a></li>
-                                <li><a href="#">Cras ex mauris, ornare eget preti</a></li>
+                                <li><a href="#">Sign Up</a></li>
                             </ul>
                         </div>
                     </div>
@@ -392,56 +429,15 @@ if (!empty($_POST['btnFbSignUp'])) {
         </section>
         <!--================End Team People Area =================-->
 
-        <!--================Sign In Area =================-->
-        <section class="sign_in_area">
-            <div id="signin" class="container">
-                <div class="row get_touch_inner">
-                    <div class="col-lg-6">
-                        <form class="contact_us_form row" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-                            <div class="form-group col-lg-6">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
-                            </div>
-                            <div class="form-group col-lg-6">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject*">
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <textarea class="form-control" name="message" id="message" rows="1" placeholder="Message"></textarea>
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <button type="submit" value="submit" class="btn submit_btn form-control">Send</button>
-                            </div>
-                        </form>
-                        <input type="button" onclick="window.location = '<?php echo $loginURL ?>';" value="Log In With Facebook" class="btn submit_btn">
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="touch_details">
-                            <div class="l_title">
-                                <img src="img/icon/title-icon.png" alt="">
-                                <h6>Say hello</h6>
-                                <h2>Get in touch, send us an e-mail or call us</h2>
-                            </div>
-                            <p>Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum.</p>
-                            <a href="#"><h5>Call us now</h5></a>
-                            <a href="#"><h4>+452373 95593 232</h4></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--================End Get in Touch Area =================-->
-
         <!--================Map Area =================-->
         <section class="world_map_area p_100">
             <div class="container">
                 <div class="world_map_inner">
                     <img class="img-fluid" src="img/world-map.png" alt="">
                     <div class="bd-callout">
-                        <h3>Gibraltar Office</h3>
-                        <p>Casemates Square, no253 <br /> United kingdom</p>
-                        <h4><a href="#">+453678 9283 559</a> <a href="#">contact@template.com</a></h4>
+                        <h3>Harare</h3>
+                        <p>8 Sherwood Ave Marlborough Harare <br/> Zimbabwe</p>
+                        <h4><a href="#">+27659313054</a> <a href="mailto:kmuvezwa@gmail.com">kmuvezwa@gmail.com</a></h4>
                     </div>
                 </div>
             </div>
@@ -454,25 +450,10 @@ if (!empty($_POST['btnFbSignUp'])) {
                 <div class="container">
                     <div class="row footer_widget_inner">
                         <div class="col-lg-4 col-sm-6">
-                            <aside class="f_widget f_about_widget">
-                                <img src="img/footer-logo.png" alt="">
-                                <p>Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum.</p>
-                            </aside>
                         </div>
                         <div class="col-lg-4 col-sm-6">
                             <aside class="f_widget f_subs_widget">
-                                <div class="f_title">
-                                    <h3>Sign Up</h3>
-                                </div>
-                                <div class="input-group">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-secondary submit_btn" type="button">Subscribe</button>
-                                    </span>
-                                </div>
-                                </br>
-                                <form action="signup.php">
-                                    <button type="submit" name="btnSignUp" value="submit" class="btn submit_btn form-control">Sign Up using Email</button>
-                                </form>
+                                
                             </aside>
                         </div>
                     </div>
@@ -494,7 +475,7 @@ if (!empty($_POST['btnFbSignUp'])) {
                     <li><a href="https://www.facebook.com/engine101.org/"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="https://www.instagram.com/engine101_/"><i class="fa fa-instagram"></i></a></li>
                     <li><a href="https://twitter.com/engine101_"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="https://github.com/Engine-101"><i class="fa fa-github"></i></a></li>
+                    <li><a href="https://github.com/Engine101org"><i class="fa fa-github"></i></a></li>
                 </ul>
             </div>
         </div>
