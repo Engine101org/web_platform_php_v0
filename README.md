@@ -1,9 +1,9 @@
-#Engine101 Web Platform V0
+# Engine101 Web Platform V0
 
-##Languages
+## Languages
 
-###PHP
-###MYSQL
-###HTML
-###CSS
-###JAVASCRIPT
+### PHP
+### MYSQL
+### HTML
+### CSS
+### JAVASCRIPT
