@@ -80,7 +80,7 @@ if (!empty($_POST['btnLogin'])) {
     <!--================Header Menu Area =================-->
     <header class="main_menu_area">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="../">
                 <img src="img/logo.png" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -198,6 +198,7 @@ if (!empty($_POST['btnLogin'])) {
                         <li><a href="https://www.facebook.com/engine101.org/"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="https://www.instagram.com/engine101_/"><i class="fa fa-instagram"></i></a></li>
                         <li><a href="https://twitter.com/engine101_"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://medium.com/engine101"><i class="fa fa-medium"></i></a></li>
                         <li><a href="https://github.com/Engine101org"><i class="fa fa-github"></i></a></li>
                     </ul>
                 </div>
